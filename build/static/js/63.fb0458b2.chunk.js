@@ -1,2 +1,0 @@
-webpackJsonp([63],{224:function(e,t,s){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var c=s(0),r=s.n(c),n=s(14),o=function(){return r.a.createElement(n.Alert,{color:"success"},r.a.createElement("i",{className:"material-icons md-18 align-top"},"done"),r.a.createElement("strong",null,"Success!")," A copy of your selected purchase orders has been sent to your customers.")};t.default=o}});
-//# sourceMappingURL=63.fb0458b2.chunk.js.map
