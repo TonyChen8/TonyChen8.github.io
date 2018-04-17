@@ -25,7 +25,7 @@ examples:
               <PaginationItem active><PaginationLink href="#">2</PaginationLink></PaginationItem>
               <PaginationItem><PaginationLink href="#">3</PaginationLink></PaginationItem>
               <PaginationItem disabled>
-                <PaginationLink href="#" tabindex="-1">...</PaginationLink>
+                <PaginationLink href="#" tabIndex="-1">...</PaginationLink>
               </PaginationItem>
               <PaginationItem><PaginationLink href="#">24</PaginationLink></PaginationItem>
               <PaginationItem>
@@ -54,7 +54,7 @@ examples:
           <li class="page-item active"><a class="page-link" href="#">2</a></li>
           <li class="page-item"><a class="page-link" href="#">3</a></li>
           <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">...</a>
+            <a class="page-link" href="#" tabIndex="-1">...</a>
           </li>
           <li class="page-item"><a class="page-link" href="#">24</a></li>
           <li class="page-item">

@@ -15,9 +15,6 @@ preText: |
   Some custom icons already exist. To explore the custom icons library, please go
   to the [download page](/download/).
 
-  This component supports fontawesome v4. Please refer to this link to get more icons:
-  [available icons](https://fontawesome.com/icons)
-
 examples:
   - title: Usage
     subTitle: Example
