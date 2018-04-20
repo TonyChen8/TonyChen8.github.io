@@ -1,0 +1,2 @@
+webpackJsonp([56],{248:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n(0),l=n.n(a),r=n(15);t.default=function(){return l.a.createElement(r.FormGroup,null,l.a.createElement(r.Label,{for:"exampleInput1"},"Default text input"),l.a.createElement(r.Input,{type:"text",id:"exampleInput1",placeholder:"Enter text"}))}}});
+//# sourceMappingURL=56.486f5df4.chunk.js.map
