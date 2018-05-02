@@ -2190,7 +2190,7 @@ var createRoutes = function (RouterConfig) {
 };
 var renderEntry = function (_a) {
     var name = _a.name, linkTo = _a.linkTo, subMenu = _a.subMenu;
-    var example = __WEBPACK_IMPORTED_MODULE_8__cache_template__["b" /* Examples */][__WEBPACK_IMPORTED_MODULE_4_camelcase__(name)];
+    var example = __WEBPACK_IMPORTED_MODULE_8__cache_template__["b" /* Examples */][__WEBPACK_IMPORTED_MODULE_4_camelcase__(linkTo)];
     var route = {
         path: linkTo,
         component: __WEBPACK_IMPORTED_MODULE_5__Example_example_component__["a" /* ExampleComponent */],
