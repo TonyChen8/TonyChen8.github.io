@@ -1,0 +1,175 @@
+title: Get Started
+category: starter
+preText: |
+  BHP Digital Design System is a starter package that is available for BHP developer to build production site and application blazingly fast. Offered in three packages: Vanilla Package, React Package and Angular Package. For more detailed step-by-step instructions on getting started, see the [help](/bhp-digital-design-system/help).
+
+  **Quick starters.**
+
+  Looking to quickly get something up for your project? Select from the premade template below.
+examples:
+  - title:
+    script: |
+      import React, { Component } from "react";
+      import { Nav, NavItem, NavLink } from "reactstrap";
+      import { classnames } from "classnames";
+
+      export default class Help extends Component {
+        constructor(props) {
+          super(props);
+
+          this.guides = [
+            "React",
+            "Angular",
+            "HTML"
+          ];
+          this.layouts = [
+            {
+              link: "https://github.com/BHP-DevHub/BHP-react-starter-fullwidth",
+              image: "full-width.png",
+              name: "Full Width"
+            },
+            {
+              link: "https://github.com/BHP-DevHub/BHP-react-starter-left-sidebar",
+              image: "left-sidebar.png",
+              name: "Left Sidebar"
+            },
+            {
+              link: "https://github.com/BHP-DevHub/BHP-react-starter-content-listing",
+              image: "content-listing-with-right-sidebar.png",
+              name: "Articles / Content listing"
+            },
+            { link: "", image: "content-listing.png" },
+            { link: "", image: "right-sidebar.png" },
+            {
+              link: "https://github.com/BHP-DevHub/BHP-react-starter-search-results",
+              image: "search.png",
+              name: "Search Results"
+            },
+            {
+              link: "https://github.com/BHP-DevHub/BHP-react-starter-top-emphasis",
+              image: "top-emphasis.png",
+              name: "Top Emphasis"
+            },
+            {
+              link: "https://github.com/BHP-DevHub/BHP-react-starter-top-emphasis-with-right-sidebar",
+              image: "top-emphasis-with-right-sidebar.png",
+              name: "Top Emphasis with Right Sidebar"
+            }
+          ];
+          this.state = {
+            activeTab: this.guides[0]
+          };
+
+          this.toggleTab = this.toggleTab.bind(this);
+        }
+
+        toggleTab(tab) {
+          if (this.state.activeTab !== tab) {
+            this.setState({
+              activeTab: tab
+            });
+          }
+        }
+
+        render() {
+          const { activeTab } = this.state;
+          const { guides, layouts } = this;
+
+          return (
+            <div>
+              <Nav tabs>
+                {guides.map((tab, index) => (
+                  <NavItem key={index}>
+                    <NavLink
+                      onClick={() => this.toggleTab(tab)}
+                      className={activeTab === tab ? "active" : null}
+                      href="#"
+                    >
+                      {tab}
+                    </NavLink>
+                  </NavItem>
+                ))}
+              </Nav>
+
+              {/* react templates */}
+              <div className="container">
+                {activeTab === guides[0] && (
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+                      {layouts.map(
+                        (layout, index) =>
+                          layout.link && (
+                            <a
+                              key={index}
+                              href={layout.link}
+                              target="blank"
+                              style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                padding: "10px",
+                                alignItems: "center"
+                              }}
+                            >
+                              <img
+                                style={{
+                                  width: "270px",
+                                  marginBottom: "10px"
+                                }}
+                                src={
+                                  process.env.PUBLIC_URL +
+                                  "/assets/layouts/" +
+                                  layout.image
+                                }
+                              />
+                              {layout.name}
+                            </a>
+                          )
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* angular templates */}
+                {activeTab === guides[1] && <div>Coming soon.</div>}
+
+                {/* html templates */}
+                {activeTab === guides[2] && <div>Coming soon.</div>}
+              </div>
+            </div>
+          );
+        }
+      }
+
+
+
+postText: |
+  Be sure to install the latest CLI for respective framework if you haven't done so. That also means to get the latest Node or Yarn running your local machine as well.
+
+  Please see the [help](/bhp-digital-design-system/help) section for a walkthrough using DDS in detail.
+
+  **Work through the tutorial.**
+
+  Our [help](/bhp-digital-design-system/help) file cover step by step instruction on how to get the most out of the Digital Design System. Please ensure to [check this page](/bhp-digital-design-system/help).
+
+  **Get Started Immediately.**
+
+  Open a console and change work path to template folder path.
+  Run a command to install all dependencies:
+  ````
+  yarn install
+  ````
+  Run a command to start development server. Then you can add your components and debug now:
+  ````
+  yarn start
+  ````
+  When project is ready to deploy, run a command to compile:
+  ````
+  yarn build
+  ````
+  The name of the output folder is "build" which is located at the root of the template folder.
+  When build finish, upload whatever in the build folder to your web server.
+
+  **Community, help and support.**
+
+  The Digital Design System is an evolving resource and can only get as good as the contribution from all of our users. Please chat with us if you have any specific requirement, ideas, suggestions or if you would like to contribute a component!
+  Maintained by the BHP UX Team, please reach out to us at: <UserExperience@bhpbilliton.com>.
