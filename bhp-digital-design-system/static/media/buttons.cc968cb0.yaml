@@ -1,0 +1,215 @@
+title: Buttons
+category: UI components
+preText: |
+  Outlined below are the rules around each button style, and how and when each style should be used.
+
+  **Function**: Is it important enough to be a primary button? What is the main action on the screen? What do I want to achieve? These questions are basic when putting buttons together. If a form shows Print, Edit, Save, Cancel and Reset the primary action will be Save. This is what i want to achieve.
+
+examples:
+  - title: Usage
+    introduction: |
+      A primary button is the strongest call-to-action on the page. Orange 1 is used to emphasize that focus. There should only ever be one primary button on screen at any one time. Secondary button is used for every action on the page that is not primary. There can be multiple secondary buttons on screen at any one time. The secondary button has a transparent background by default state.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button } from 'reactstrap';
+
+      const Example = () => {
+        return (
+          <div>
+            <Button color="primary">Primary</Button>{" "}
+            <Button color="secondary">Secondary</Button>{" "}
+            <Button color="secondary disabled">Disabled</Button>{" "}
+            <Button color="danger">Delete</Button>{" "}
+            <Button color="secondary" outline>Outline</Button>{" "}
+          </div>
+        );
+      };
+
+      export default Example;
+    html: |
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-secondary disabled">Disabled</button>
+      <button type="button" class="btn btn-danger">Delete</button>
+      <button type="button" class="btn btn-outline-secondary">Outline</button>
+
+    angular: |
+      import { Component } from "@angular/core";
+      @Component({
+        selector: "example",
+        template: `
+          <Button class="btn" btnColor="primary">Primary</Button>
+          <Button class="btn" btnColor="secondary">Secondary</Button>
+          <Button class="btn disabled" btnColor="secondary">Disabled</Button>
+          <Button class="btn" btnColor="danger">Delete</Button>
+          <Button class="btn" btnColor="secondary outline" >Outline</Button>`
+      })
+      export class Example {}
+
+
+  - title: Colour variations
+    introduction: |
+      You can change the colour of the button by appending `secondary` to define
+      secondary actions, or combine with the standard color classes for
+      alternate styles.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button } from 'reactstrap';
+
+      const Example = () => {
+        return (
+          <div>
+            <Button color="success">Success</Button>{" "}
+            <Button color="info">Info</Button>{" "}
+            <Button color="warning">Warning</Button>{" "}
+            <Button color="danger">Danger</Button>{" "}
+            <Button color="secondary">Secondary</Button>{" "}
+            <Button color="secondary" outline>Secondary outline</Button>{" "}
+            <Button color="primary">
+              <i className="fas fa-star"></i> Primary
+            </Button>{" "}
+          </div>
+        );
+      };
+
+      export default Example;
+    html: |
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-outline-secondary">Secondary outline</button>
+      <button type="button" class="btn btn-primary">
+        <i class="fas fa-star"></i> Primary
+      </button>
+
+    angular: |
+      import { Component } from "@angular/core";
+      @Component({
+        selector: "example",
+        template: `
+          <div>
+            <Button class="btn" btnColor="success">Success</Button>
+            <Button class="btn" btnColor="info">Info</Button>
+            <Button class="btn" btnColor="warning">Warning</Button>
+            <Button class="btn" btnColor="danger">Danger</Button>
+            <Button class="btn" btnColor="secondary">Secondary</Button>
+            <Button class="btn" btnColor="secondary outline" >Secondary outline</Button>
+            <Button class="btn" btnColor="primary">
+              <i class="fas fa-star"></i> Primary
+            </Button>
+          </div>`
+      })
+      export class Example {}
+
+
+  - title: Button group
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button, ButtonGroup } from 'reactstrap';
+
+      const Example = () => {
+        return (
+          <ButtonGroup aria-label="Basic example">
+            <Button color="secondary" outline>Left</Button>
+            <Button color="secondary" outline>Middle</Button>
+            <Button color="secondary" outline>Right</Button>
+          </ButtonGroup>
+        );
+      };
+
+      export default Example;
+    html: |
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-outline-secondary">Left</button>
+        <button type="button" class="btn btn-outline-secondary">Middle</button>
+        <button type="button" class="btn btn-outline-secondary">Right</button>
+      </div>
+
+    angular: |
+      import { Component } from "@angular/core";
+      @Component({
+        selector: "example",
+        template: `
+          <div class="btn-group" btnRadioGroup >
+            <Button class="btn" btnColor="secondary outline" btnRadio="Left">Left</Button>
+            <Button class="btn" btnColor="secondary outline" btnRadio="Middle">Middle</Button>
+            <Button class="btn" btnColor="secondary outline" btnRadio="Right">Right</Button>
+          </div>`
+      })
+      export class Example {}
+
+
+  - title: Button sizes
+    introduction: |
+      Small buttons are used within tables or cells. They can also be used in Search, Sort and Filter rows inline with other controls such as search fields and date controls for example.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button } from 'reactstrap';
+
+      const Example = () => {
+        return (
+          <div>
+            <Button color="primary" size="lg">Large button</Button>{" "}
+            <Button color="secondary" size="lg" outline>Large button</Button>{" "}
+            <Button color="primary" size="sm">Small button</Button>{" "}
+            <Button color="secondary" size="sm" outline>Small button</Button>{" "}
+          </div>
+        );
+      };
+
+      export default Example;
+    html: |
+      <button type="button" class="btn btn-primary btn-lg">Large button</button>
+      <button type="button" class="btn btn-outline-secondary btn-lg">Large button</button>
+      <button type="button" class="btn btn-primary btn-sm">Small button</button>
+      <button type="button" class="btn btn-outline-secondary btn-sm">Small button</button>
+
+    angular: |
+      import { Component } from "@angular/core";
+      @Component({
+        selector: "example",
+        template: `
+          <Button class="btn btn-lg" btnColor="primary" >Large button</Button>
+          <Button class="btn btn-lg" btnColor="secondary outline"  >Large button</Button>
+          <Button class="btn btn-sm" btnColor="primary" >Small button</Button>
+          <Button class="btn btn-sm" btnColor="secondary outline"  >Small button</Button>`
+      })
+      export class Example {}
+
+
+postText: |
+
+  <hr />
+  <h4 class="h4-light">Colour Definition</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Style</th>
+        <th scope="col">Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>btn-secondary</td>
+        <td>Use for secondary type actions such as "Refresh", "Update", etc. Mostly used when a btn-primary has already been used in the same context.</td>
+      </tr>
+      <tr>
+        <td>btn-primary</td>
+        <td>Use for primary type of actions. A primary colour provides consistency across an application. It trains a user to look for that colours when trying to find an action. This uses the section primary colour which can be found across all types of buttons, tabs, and other action-related components.</td>
+      </tr>
+      <tr>
+        <td>btn-success</td>
+        <td>Use for "Save", "Apply", "Accept" and similar buttons.</td>
+      </tr>
+      <tr>
+        <td>btn-danger</td>
+        <td>Use for "Delete", "Cancel" and similar buttons.</td>
+      </tr>
+    </tbody>
+  </table>

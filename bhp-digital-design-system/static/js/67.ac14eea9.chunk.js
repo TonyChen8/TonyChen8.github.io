@@ -1,0 +1,2 @@
+webpackJsonp([67],{235:function(e,c,s){"use strict";Object.defineProperty(c,"__esModule",{value:!0});var t=s(0),a=s.n(t),r=s(52),n=function(){return a.a.createElement(r.a,{color:"success"},a.a.createElement("i",{className:"fas fa-check md-18"})," ",a.a.createElement("strong",null,"Success!")," A copy of your selected purchase orders has been sent to your customers.")};c.default=n}});
+//# sourceMappingURL=67.ac14eea9.chunk.js.map

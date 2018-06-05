@@ -1,0 +1,2 @@
+webpackJsonp([63],{239:function(e,a,t){"use strict";Object.defineProperty(a,"__esModule",{value:!0});var c=t(0),l=t.n(c),r=t(52),n=function(){return l.a.createElement("div",null,l.a.createElement(r.b,{color:"primary"},"4")," ",l.a.createElement(r.b,{color:"primary"},l.a.createElement("i",{className:"fas fa-star md-12 align-middle"})," 99")," ",l.a.createElement(r.b,{color:"success"},l.a.createElement("i",{className:"fas fa-check md-12 align-middle"})," 14")," ")};a.default=n}});
+//# sourceMappingURL=63.475e6381.chunk.js.map

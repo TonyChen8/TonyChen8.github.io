@@ -1,0 +1,49 @@
+title: Breadcrumbs
+category: UI components
+preText: |
+   Breadcrumbs is a graphical control element used as a navigational aid in user interfaces.
+
+   Angular breadcrumbs links are generated based on the route configuration. Please refer to [github](https://github.com/McNull/ngx-breadcrumbs) to see hwo to use it.
+examples:
+  - title: Usage
+    introduction: Below is an example of the primary usage of the tabs.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+
+      export default ()  => {
+        return (
+          <div>
+            <Breadcrumb>
+              <BreadcrumbItem active>Home</BreadcrumbItem>
+            </Breadcrumb>
+            <Breadcrumb>
+              <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
+              <BreadcrumbItem active>Library</BreadcrumbItem>
+            </Breadcrumb>
+            <Breadcrumb>
+              <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
+              <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
+              <BreadcrumbItem active>Data</BreadcrumbItem>
+            </Breadcrumb>
+          </div>
+        );
+      };
+
+    html: |
+      <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="#">Home</a>
+        <a class="breadcrumb-item" href="#">Library</a>
+        <a class="breadcrumb-item" href="#">Data</a>
+        <span class="breadcrumb-item active">Bootstrap</span>
+      </nav>
+    angular: |
+      import { Component } from "@angular/core";
+      import { McBreadcrumbsModule } from 'ngx-breadcrumbs';
+
+      @Component({
+        selector: "example",
+        template: `<mc-breadcrumbs></mc-breadcrumbs>`
+      })
+      export class Example {}

@@ -1,0 +1,129 @@
+title: DDS Walkthrough
+category: help
+preText: |
+  The UX team is so happy that you've decided to try building using DDS. This walkthough contained step by step tutorial and is aimed at getting you up to speed at the fastest, least resistance path, from nothing to something.
+
+  This tutorial is still in development, if you have any question or suggestion, please do reach out to us at: <UserExperience@bhpbilliton.com>. We are always keen to hear some feedbacks - happy ending or not. That's the only way DDS will be able to improve and iterate to a perfect resource for the masses.
+
+  First thing first, you will need to get Node and Yarn installed on your local machine. DDS leverage these two components as its starter package.
+
+  **Installing Node on your machine.**
+
+  To install NodeJs, please follow the instructions at <https://nodejs.org/en/download/package-manager/>.
+
+  **Installing Yarn on your machine.**
+
+  To install Yarn, please follow the instructions at <https://yarnpkg.com/lang/en/docs/install/>.
+
+  Now, decide on your platform. Unfortunately, we won't be able to decide that for you. As the answer depends on a wide range of factors which make a particular technology more or less suitable for your environment and use case.
+
+examples:
+  - title:
+    script: |
+      import React, { Component } from "react";
+      import { Nav, NavItem, NavLink } from "reactstrap";
+
+      export default class Help extends Component {
+        constructor(props) {
+          super(props);
+
+          this.guides = ["React", "Angular", "HTML"];
+
+          this.state = {
+            activeTab: this.guides[0]
+          };
+
+          this.toggleTab = this.toggleTab.bind(this);
+        }
+
+        toggleTab(tab) {
+          if (this.state.activeTab !== tab) {
+            this.setState({
+              activeTab: tab
+            });
+          }
+        }
+
+        render() {
+          const { activeTab } = this.state;
+          const { guides, layouts } = this;
+
+          return (
+            <div>
+              <Nav tabs>
+                {guides.map((tab, index) => (
+                  <NavItem key={index}>
+                    <NavLink
+                      onClick={() => this.toggleTab(tab)}
+                      className={activeTab === tab ? "active" : null}
+                      href="#"
+                    >
+                      {tab}
+                    </NavLink>
+                  </NavItem>
+                ))}
+              </Nav>
+
+              {/* react templates */}
+              <div className="container">
+                {activeTab === guides[0] && (
+                  <div>
+                    <p />
+                    <p>
+                      React is developed and maintained by Facebook and used in their
+                      own products, including Instagram and WhatsApp. It has been
+                      around since 2013.
+                    </p>
+                    <p>
+                      <strong>Installing ReactJs CLI on your machine.</strong>
+                    </p>
+                    <pre>
+                      <code>npm install -g create-react-app</code>
+                    </pre>
+                  </div>
+                )}
+
+                {/* angular templates */}
+                {activeTab === guides[1] && (
+                  <div>
+                    <p />
+                    <p>
+                      Angular is a predecessor of AngularJS, developed and maintained
+                      by Google and used in AdWords and Google Fiber. It has been
+                      around since 2010.
+                    </p>
+                    <p>
+                      <strong>Installing AngularJs CLI on your machine.</strong>
+                    </p>
+                    <pre>
+                      <code>npm install -g "@angular/cli"</code>
+                    </pre>
+                  </div>
+                )}
+
+                {/* html templates */}
+                {activeTab === guides[2] && (
+                  <div>
+                    <p />
+                    <p>You don't need to install any CLI.</p>
+                  </div>
+                )}
+              </div>
+              <br />
+            </div>
+          );
+        }
+      }
+
+postText: |
+  **Using Components**
+
+  Please refer to our documentation on best practice when dealing with interface layouts to give your users the best of experience. Each UI components also comes with sample code that you can easily copy and paste into your project.
+  If you do have any specific requirement for component that is not currently available, please reach out and request it from us at: <UserExperience@bhpbilliton.com>.
+
+
+  **Quick Starter Package**
+
+  Digital Design System comes with pre-made starter templates to help you bootstrap your project. Please visit the [getting started page](/bhp-digital-design-system/starter/layout-templates) for these pre-made layouts.
+
+

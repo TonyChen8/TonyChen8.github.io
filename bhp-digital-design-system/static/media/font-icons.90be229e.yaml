@@ -1,0 +1,26 @@
+title: "Font Icons"
+category: "Foundation"
+preText: |
+  We are promoting the use of [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free). These free font icons are open-source and created to depict in simple and minimal forms the universal concepts used commonly throughout a user interface.
+
+  In some cases (design need or topical icons) [Material Design font icons](https://google.github.io/material-design-icons/) can be used as a secondary option.
+
+  When you have to use a special icon (for a product / event / campaign) we recommend using Scalable Vector Graphic (SVG) formats only. By not using the traditional pixel-based formats (.GIF .PNG .JPEG) you ensure a high quality display at any screen depth (e.g., HD / Retina / UHD).
+
+  <hr />
+
+  #### <span class="h4-light">Font Awesome font icons</span>
+
+  - [Font Awesome](https://fontawesome.com/)
+  - See the full set of free icons in the [Font Awesome Icon Library](https://fontawesome.com/icons?d=gallery&m=free)
+
+  <hr />
+
+  #### <span class="h4-light">Material Design font icons</span>
+
+  - [Material icons guide](https://google.github.io/material-design-icons/)
+  - See the full set of icons in the [Material Icons Library](https://material.io/icons/)
+
+
+  ```
+

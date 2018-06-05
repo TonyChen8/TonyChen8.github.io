@@ -1,0 +1,2 @@
+webpackJsonp([62],{240:function(e,t,c){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=c(0),r=c.n(n),a=c(52),l=function(){return r.a.createElement("div",null,r.a.createElement(a.b,{color:"secondary"},"99")," ",r.a.createElement(a.b,{color:"success"},"99")," ",r.a.createElement(a.b,{color:"danger"},"99")," ")};t.default=l}});
+//# sourceMappingURL=62.76acc392.chunk.js.map
